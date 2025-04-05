@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root "projects#index"
 
   resources :projects do
-    resources :project_histories, only: [:create]
+    resources :project_histories, only: [ :create ]
   end
 end
