@@ -1,2 +1,2 @@
 # homey
- Ruby on Rails to build a project conversation history
+ Ruby on Rails to build a project conversation history.
