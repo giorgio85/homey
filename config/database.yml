@@ -15,7 +15,13 @@ test:
   database: homey_test
 
 production:
-  <<: *default
-  database: <%= ENV['DATABASE_URL'] %>
-  pool: 5
-  timeout: 5000
+  primary:
+    <<: *default
+    database: homey_production
+    username: <%= ENV['DATABASE_USERNAME'] %>
+    password: <%= ENV['DATABASE_PASSWORD'] %>
+  cable:
+    <<: *default
+    database: homey_cable_production
+    username: <%= ENV['DATABASE_USERNAME'] %>
+    password: <%= ENV['DATABASE_PASSWORD'] %>
