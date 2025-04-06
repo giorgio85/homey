@@ -28,6 +28,27 @@ class ProjectsController < ApplicationController
       end
     end
 
+    def change_status
+      @project = current_user.projects.find(params[:id])
+      new_status = params[:status]  # Get the new status from params
+
+      # Create the project history first before updating the status
+      @project_history = @project.project_histories.create(
+        user: current_user,
+        event_type: 'Status Changed',
+        content: "Changed status from #{@project.status} to #{new_status}"
+      )
+
+      # Now update the project status
+      if @project.update(status: new_status)
+        flash[:notice] = "Project status updated successfully!"
+      else
+        flash[:alert] = "Failed to update project status."
+      end
+
+      redirect_to projects_path
+    end
+
     private
 
     def set_project

@@ -34,3 +34,15 @@ Expected Answer: Chronologically, with comments and status changes in order.
 * Should there be a UI component for the project conversation history?
 
 Expected Answer: Yes, and it should be styled using Tailwind CSS.
+
+# Set up the project
+* 'rails db:create' 
+* 'rails db:create' 
+* 'rails db:seed' 
+
+# Run the project
+'rails s'
+
+## User credentials:
+login: user1@example.com
+password: password123

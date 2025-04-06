@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
-    has_many :project_histories, dependent: :destroy
     belongs_to :user
-
+    has_many :project_histories, dependent: :destroy
+  
     validates :name, presence: true
 end
