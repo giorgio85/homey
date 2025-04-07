@@ -56,6 +56,12 @@ Homey is a Ruby on Rails application for managing project conversation history. 
    ```sh
    rails s
    ```
+## Heroky URL
+https://homey-9e92389d463d.herokuapp.com/
+
+## Test User
+* Login: user1@example.com
+* Password: password123
 
 ## API Endpoints
 
