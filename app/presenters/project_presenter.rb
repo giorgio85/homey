@@ -5,8 +5,8 @@ class ProjectPresenter
       "completed" => "Completed",
       "archived" => "Archived"
     }.freeze
-  
+
     def self.status_options
-      STATUSES.map { |key, value| [value, key] }
+      STATUSES.map { |key, value| [ value, key ] }
     end
-  end
+end

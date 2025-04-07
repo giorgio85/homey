@@ -35,7 +35,7 @@ class ProjectsController < ApplicationController
       # Create the project history first before updating the status
       @project_history = @project.project_histories.create(
         user: current_user,
-        event_type: 'Status Changed',
+        event_type: "Status Changed",
         content: "Changed status from #{@project.status} to #{new_status}"
       )
 
