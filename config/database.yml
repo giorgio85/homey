@@ -15,13 +15,7 @@ test:
   database: homey_test
 
 production:
-  primary:
-    <<: *default
-    database: homey_production
-    username: <%= ENV['DATABASE_USERNAME'] %>
-    password: <%= ENV['DATABASE_PASSWORD'] %>
-  cable:
-    <<: *default
-    database: homey_cable_production
-    username: <%= ENV['DATABASE_USERNAME'] %>
-    password: <%= ENV['DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['DATABASE_URL'] %>
+  pool: 5
